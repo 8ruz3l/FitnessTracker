@@ -1,0 +1,37 @@
+.day-view{
+    padding:1rem;
+    
+    .planned-container {
+        display:flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        gap:1rem;
+        flex-wrap: wrap;
+        
+        .planning-type {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            align-items: flex-end;
+            gap:0.5rem;
+        }
+
+        .meal {
+            border: 1px solid;
+            .meal-title-row {
+                display:flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .comment-input {
+        width:100%;
+        max-width: 500rem;
+        min-height:5rem;
+    }
+}

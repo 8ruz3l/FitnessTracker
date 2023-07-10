@@ -1,0 +1,54 @@
+<div class="day-view">
+    <h1>{{date | date: 'dd.MM.yyyy'}}</h1>
+    <div class="planned-container">
+        <div class="planning-type">
+            <h3>Exercises</h3>
+            <table class="table table-dark">
+                <thead>
+                    <th>Exercise</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Done</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let exercise of plannedExercises">
+                        <td>{{exercise.name}}</td>
+                        <td>{{exercise.amount}}</td>
+                        <td>{{exercise.type}}</td>
+                        <td><input type="checkbox"></td>
+                        <td class="action-buttons">
+                            <button (click)="deleteExercise(exercise)">Delete</button>
+                            <button (click)="editExercise(exercise)">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="addExersicePopup()">Add Exercise</button>
+        </div>
+
+        <div class="planning-type">
+            <h3>Meals</h3>
+            <div *ngFor="let meal of meals" class="meal">
+                <div class="meal-title-row">
+                    <span>{{meal.name}}</span>
+                    <div>
+                        <button (click)="deleteMeal(meal)">Delete</button>
+                        <button (click)="editMeal(meal)">Edit</button>
+                    </div>
+                </div>
+                <div *ngFor="let ingredient of meal.ingredients">
+                    <a>{{ingredient.name}} </a>
+                    <a>x{{ingredient.amount}},</a>
+                </div>
+            </div>
+            <button (click)="addMealPopup()">Add Meal</button>
+        </div>
+    </div>
+
+    <div>
+        <h3>Comment:</h3>
+        <input type="text" class="comment-input">
+    </div>
+    <button>Save</button>
+</div>

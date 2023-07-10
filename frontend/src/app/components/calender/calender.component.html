@@ -1,0 +1,19 @@
+<div class="calender-view">
+    <h1> <button><i class="fa-solid fa-arrow-left"></i></button>{{month}} <button><i class="fa-solid fa-arrow-right"></i></button></h1>    
+
+    <div class="calender-grid">
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+        <div>Sun</div>
+        <div *ngFor="let filler of fillerDays" class="calender-date filler-date">
+
+        </div>
+        <div *ngFor="let day of arrayOfDays" class="calender-date" routerLink="/day">
+            <span>{{day}}</span>
+        </div>
+    </div>
+</div>

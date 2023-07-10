@@ -1,0 +1,29 @@
+.calender-view {
+    padding:1rem;
+    height:100%;
+
+    .calender-grid {
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 100%;
+
+        .calender-date {
+            border: solid 1px;
+            min-height:5rem;
+            height:100%;
+        }
+
+        .calender-date:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+
+        .filler-date {
+            background-color: grey;
+        }
+    }
+    
+}
+button {
+    margin: 0 1rem;
+}
